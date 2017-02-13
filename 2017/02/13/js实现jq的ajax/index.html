@@ -6,21 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liyuanqing.top">
-  <title>Hello World | 李元庆的博客</title>
+  <title>js实现jq的ajax | 李元庆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://liyuanqing.top/2017/02/09/hello-world/index.html">
+<meta property="og:title" content="js实现jq的ajax">
+<meta property="og:url" content="http://liyuanqing.top/2017/02/13/js实现jq的ajax/index.html">
 <meta property="og:site_name" content="李元庆的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-09T06:11:39.448Z">
+<meta property="og:description" content="本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解">
+<meta property="og:updated_time" content="2017-02-13T10:29:42.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="js实现jq的ajax">
+<meta name="twitter:description" content="本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解">
   
     <link rel="alternative" href="/atom.xml" title="李元庆的博客" type="application/atom+xml">
   
@@ -160,35 +157,44 @@ Quick">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js实现jq的ajax" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      js实现jq的ajax
     </h1>
   
 
         
-        <a href="/2017/02/09/hello-world/" class="archive-article-date">
-  	<time datetime="2017-02-09T06:11:39.448Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
+        <a href="/2017/02/13/js实现jq的ajax/" class="archive-article-date">
+  	<time datetime="2017-02-13T10:22:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解<br> <a id="more"></a></p>
+<h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">ajax</span></span>()&#123;</div><div class="line"> //获取ajax的相应值（请求类型，请求地址，同步或异步，传递数据，接收数据类型，成功失败函数等）</div><div class="line">  var ajaxData = &#123;</div><div class="line">    <span class="built_in">type</span>:arguments[0].type || <span class="string">"GET"</span>,</div><div class="line">    url:arguments[0].url || <span class="string">""</span>,</div><div class="line">    async:arguments[0].async || <span class="string">"true"</span>,</div><div class="line">    data:arguments[0].data || null,</div><div class="line">    dataType:arguments[0].dataType || <span class="string">"text"</span>,</div><div class="line">    contentType:arguments[0].contentType || <span class="string">"application/x-www-form-urlencoded"</span>,</div><div class="line">    beforeSend:arguments[0].beforeSend || <span class="function"><span class="title">function</span></span>()&#123;&#125;,</div><div class="line">    success:arguments[0].success || <span class="function"><span class="title">function</span></span>()&#123;&#125;,</div><div class="line">    error:arguments[0].error || <span class="function"><span class="title">function</span></span>()&#123;&#125;</div><div class="line">  &#125;</div><div class="line">  ajaxData.beforeSend()</div><div class="line">  var xhr = createxmlHttpRequest();    //创建 XMLHttpRequest 对象</div><div class="line">  xhr.responseType=ajaxData.dataType;  //预期服务器返回的数据类型</div><div class="line">  xhr.open(ajaxData.type,ajaxData.url,ajaxData.async);  //规定请求的类型、URL 以及是否异步处理请求</div><div class="line">  xhr.setRequestHeader(<span class="string">"Content-Type"</span>,ajaxData.contentType);  //发送信息至服务器时内容编码类型(向请求添加 HTTP 头)</div><div class="line">  xhr.send(convertData(ajaxData.data));                     //将请求发送到服务器</div><div class="line">  //当请求被发送到服务器时，我们需要执行一些基于响应的任务。</div><div class="line">  //每当 readyState 改变时，就会触发 onreadystatechange 事件。</div><div class="line">  //readyState 属性存有 XMLHttpRequest 的状态信息。</div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    <span class="keyword">if</span> (xhr.readyState == 4) &#123;</div><div class="line">      <span class="keyword">if</span>(xhr.status == 200)&#123;</div><div class="line">        ajaxData.success(xhr.response)</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        ajaxData.error()</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//创建 XMLHttpRequest 对象</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">createxmlHttpRequest</span></span>() &#123;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (window.ActiveXObject) &#123;</div><div class="line">    // IE6, IE5 浏览器执行代码</div><div class="line">    <span class="built_in">return</span> new ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (window.XMLHttpRequest) &#123;</div><div class="line">     //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</div><div class="line">    <span class="built_in">return</span> new XMLHttpRequest();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//解析传入的对象</div><div class="line"><span class="keyword">function</span> convertData(data)&#123;</div><div class="line">  <span class="keyword">if</span>( typeof data === <span class="string">'object'</span> )&#123;</div><div class="line">    var convertResult = <span class="string">""</span> ;</div><div class="line">    <span class="keyword">for</span>(var c <span class="keyword">in</span> data)&#123;</div><div class="line">      convertResult+= c + <span class="string">"="</span> + data[c] + <span class="string">"&amp;"</span>;</div><div class="line">    &#125;</div><div class="line">    convertResult=convertResult.substring(0,convertResult.length-1)</div><div class="line">    <span class="built_in">return</span> convertResult;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">return</span> data;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h3><pre><code class="bash">ajax({
+      <span class="built_in">type</span>:<span class="string">"POST"</span>,
+      url:<span class="string">"ajax.php"</span>,
+      dataType:<span class="string">"json"</span>,
+      data:{<span class="string">"val1"</span>:<span class="string">"abc"</span>,<span class="string">"val2"</span>:123,<span class="string">"val3"</span>:<span class="string">"456"</span>},
+      beforeSend:<span class="function"><span class="title">function</span></span>(){
+        //some js code
+      },
+      success:<span class="keyword">function</span>(msg){
+        console.log(msg)
+      },
+      error:<span class="function"><span class="title">function</span></span>(){
+        console.log(<span class="string">"error"</span>)
+      }
+    })
+</code></pre>
 
       
 
@@ -223,6 +229,17 @@ Quick">
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">js jq ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -273,7 +290,7 @@ Quick">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://liyuanqing.top/2017/02/09/hello-world/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liyuanqing.top/2017/02/13/js实现jq的ajax/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -287,15 +304,11 @@ Quick">
   
 <nav id="article-nav">
   
-    <a href="/2017/02/09/测试博客/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          测试博客
-        
-      </div>
-    </a>
   
+    <a href="/2017/02/09/测试博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -312,7 +325,7 @@ Quick">
 
  <section id="comments">
   <!-- 多说评论框 start -->
-<div id="ds-thread" class="ds-thread" data-thread-key="2017/02/09/hello-world/" data-title="Hello World" data-url="http://liyuanqing.top/2017/02/09/hello-world/"></div>
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/02/13/js实现jq的ajax/" data-title="js实现jq的ajax" data-url="http://liyuanqing.top/2017/02/13/js实现jq的ajax/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

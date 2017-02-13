@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyuanqing.top/"/>
-  <updated>2017-02-10T11:12:42.397Z</updated>
+  <updated>2017-02-13T10:29:42.092Z</updated>
   <id>http://liyuanqing.top/</id>
   
   <author>
@@ -16,42 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>基于github与hexo搭建自己的博客</title>
-    <link href="http://liyuanqing.top/2017/02/10/%E5%9F%BA%E4%BA%8Egithub%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://liyuanqing.top/2017/02/10/基于github与hexo搭建自己的博客/</id>
-    <published>2017-02-10T09:58:05.000Z</published>
-    <updated>2017-02-10T11:12:42.397Z</updated>
+    <title>js实现jq的ajax</title>
+    <link href="http://liyuanqing.top/2017/02/13/js%E5%AE%9E%E7%8E%B0jq%E7%9A%84ajax/"/>
+    <id>http://liyuanqing.top/2017/02/13/js实现jq的ajax/</id>
+    <published>2017-02-13T10:22:43.000Z</published>
+    <updated>2017-02-13T10:29:42.092Z</updated>
     
-    <content type="html"><![CDATA[<p>本文将介绍如何基于github与hexo模板搭建一个属于自己的博客，博客的样式可以参看 <a href="liyuanqing.top">李元庆的博客</a> 博客的具体代码可以查看<a href="https://github.com/liyuanqing/liyuanqing.github.io" target="_blank" rel="external">我的github仓库（持续更新中）</a>，同时欢迎各位留言提问与给出建议<br> <a id="more"></a></p>
-<h3 id="为何选择github与hexo"><a href="#为何选择github与hexo" class="headerlink" title="为何选择github与hexo"></a>为何选择github与hexo</h3><p> github为我们提供了免费的域名与仓库，相比较博客园与新浪微博等博客，虽然他们开通相对容易，但是限制较多，github Pages可以定制自己的博客内容功能能，一切有自己操控。<br>  Github Pages优点：</p>
-<ul>
-<li>轻量级的博客系统，没有麻烦的配置</li>
-<li>使用标记语言，比如Markdown</li>
-<li>无需自己搭建服务器</li>
-<li>根据Github的限制，对应的每个站有300MB空间</li>
-<li>可以绑定自己的域名<br>Github Pages缺点：</li>
-<li>不能关联数据库，所有的东西都是静态的</li>
-<li>具有大小限制（似乎是2G）,不过用于搭建自己的博客或者是小站完全是够的<br>一开始我选择的是官方推荐的Jekyll，但是Jekyll需要的环境太多，较复杂，所以后来我选择的比较简单的hexo<br>接下来我将介绍如何搭建博客并绑定自己的域名</li>
-</ul>
-<h3 id="注册github账号和自己的仓库"><a href="#注册github账号和自己的仓库" class="headerlink" title="注册github账号和自己的仓库"></a>注册github账号和自己的仓库</h3><ol>
-<li>前往<a href="www.github.com">github</a>注册登录账号，与一般的网站注册账号的流程差不多，但是github是国外网站，在国内访问速度会有点慢<br>注册好了之后登录<br>&lt;<img src="http://i1.piimg.com/1949/4b852eda6f0fd388.png" alt=""></li>
-</ol>
-<ol>
-<li><p>建立自己的仓库<br>&lt;<img src="http://i1.piimg.com/1949/a0db1bcef31c849a.png" alt=""></p>
-<p>然后点击new按钮你会看到<br>&lt;<img src="http://i1.piimg.com/1949/7d46a29f51bca89d.png" alt=""><br>注意你的公共哭的名称要填写格式为XXX.github.io其中XXX是你的用户名</p>
-</li>
-<li>未完待续。。。</li>
-</ol>
+    <content type="html"><![CDATA[<p>本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解<br> <a id="more"></a></p>
+<h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">ajax</span></span>()&#123;</div><div class="line"> //获取ajax的相应值（请求类型，请求地址，同步或异步，传递数据，接收数据类型，成功失败函数等）</div><div class="line">  var ajaxData = &#123;</div><div class="line">    <span class="built_in">type</span>:arguments[0].type || <span class="string">"GET"</span>,</div><div class="line">    url:arguments[0].url || <span class="string">""</span>,</div><div class="line">    async:arguments[0].async || <span class="string">"true"</span>,</div><div class="line">    data:arguments[0].data || null,</div><div class="line">    dataType:arguments[0].dataType || <span class="string">"text"</span>,</div><div class="line">    contentType:arguments[0].contentType || <span class="string">"application/x-www-form-urlencoded"</span>,</div><div class="line">    beforeSend:arguments[0].beforeSend || <span class="function"><span class="title">function</span></span>()&#123;&#125;,</div><div class="line">    success:arguments[0].success || <span class="function"><span class="title">function</span></span>()&#123;&#125;,</div><div class="line">    error:arguments[0].error || <span class="function"><span class="title">function</span></span>()&#123;&#125;</div><div class="line">  &#125;</div><div class="line">  ajaxData.beforeSend()</div><div class="line">  var xhr = createxmlHttpRequest();    //创建 XMLHttpRequest 对象</div><div class="line">  xhr.responseType=ajaxData.dataType;  //预期服务器返回的数据类型</div><div class="line">  xhr.open(ajaxData.type,ajaxData.url,ajaxData.async);  //规定请求的类型、URL 以及是否异步处理请求</div><div class="line">  xhr.setRequestHeader(<span class="string">"Content-Type"</span>,ajaxData.contentType);  //发送信息至服务器时内容编码类型(向请求添加 HTTP 头)</div><div class="line">  xhr.send(convertData(ajaxData.data));                     //将请求发送到服务器</div><div class="line">  //当请求被发送到服务器时，我们需要执行一些基于响应的任务。</div><div class="line">  //每当 readyState 改变时，就会触发 onreadystatechange 事件。</div><div class="line">  //readyState 属性存有 XMLHttpRequest 的状态信息。</div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    <span class="keyword">if</span> (xhr.readyState == 4) &#123;</div><div class="line">      <span class="keyword">if</span>(xhr.status == 200)&#123;</div><div class="line">        ajaxData.success(xhr.response)</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        ajaxData.error()</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//创建 XMLHttpRequest 对象</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">createxmlHttpRequest</span></span>() &#123;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (window.ActiveXObject) &#123;</div><div class="line">    // IE6, IE5 浏览器执行代码</div><div class="line">    <span class="built_in">return</span> new ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (window.XMLHttpRequest) &#123;</div><div class="line">     //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</div><div class="line">    <span class="built_in">return</span> new XMLHttpRequest();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//解析传入的对象</div><div class="line"><span class="keyword">function</span> convertData(data)&#123;</div><div class="line">  <span class="keyword">if</span>( typeof data === <span class="string">'object'</span> )&#123;</div><div class="line">    var convertResult = <span class="string">""</span> ;</div><div class="line">    <span class="keyword">for</span>(var c <span class="keyword">in</span> data)&#123;</div><div class="line">      convertResult+= c + <span class="string">"="</span> + data[c] + <span class="string">"&amp;"</span>;</div><div class="line">    &#125;</div><div class="line">    convertResult=convertResult.substring(0,convertResult.length-1)</div><div class="line">    <span class="built_in">return</span> convertResult;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">return</span> data;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h3><pre><code class="bash">ajax({
+      <span class="built_in">type</span>:<span class="string">"POST"</span>,
+      url:<span class="string">"ajax.php"</span>,
+      dataType:<span class="string">"json"</span>,
+      data:{<span class="string">"val1"</span>:<span class="string">"abc"</span>,<span class="string">"val2"</span>:123,<span class="string">"val3"</span>:<span class="string">"456"</span>},
+      beforeSend:<span class="function"><span class="title">function</span></span>(){
+        //some js code
+      },
+      success:<span class="keyword">function</span>(msg){
+        console.log(msg)
+      },
+      error:<span class="function"><span class="title">function</span></span>(){
+        console.log(<span class="string">"error"</span>)
+      }
+    })
+</code></pre>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文将介绍如何基于github与hexo模板搭建一个属于自己的博客，博客的样式可以参看 &lt;a href=&quot;liyuanqing.top&quot;&gt;李元庆的博客&lt;/a&gt; 博客的具体代码可以查看&lt;a href=&quot;https://github.com/liyuanqing/liyuanqing.github.io&quot;&gt;我的github仓库（持续更新中）&lt;/a&gt;，同时欢迎各位留言提问与给出建议&lt;br&gt;
+      &lt;p&gt;本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解&lt;br&gt;
     
     </summary>
     
     
-      <category term="github 博客 hexo" scheme="http://liyuanqing.top/tags/github-%E5%8D%9A%E5%AE%A2-hexo/"/>
+      <category term="js jq ajax" scheme="http://liyuanqing.top/tags/js-jq-ajax/"/>
     
   </entry>
   
