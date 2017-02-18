@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyuanqing.top/"/>
-  <updated>2017-02-18T01:56:58.723Z</updated>
+  <updated>2017-02-18T05:50:17.398Z</updated>
   <id>http://liyuanqing.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://liyuanqing.top/2017/02/17/%E8%A7%A3%E5%86%B3iOS%E4%B8%8Epad%E9%87%8Cifram%E6%97%A0%E6%B3%95%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
     <id>http://liyuanqing.top/2017/02/17/解决iOS与pad里ifram无法滑动问题/</id>
     <published>2017-02-17T09:28:34.000Z</published>
-    <updated>2017-02-18T01:56:58.723Z</updated>
+    <updated>2017-02-18T05:50:17.398Z</updated>
     
     <content type="html"><![CDATA[<h2 id="解决iOS与pad里ifram无法滑动问题"><a href="#解决iOS与pad里ifram无法滑动问题" class="headerlink" title="解决iOS与pad里ifram无法滑动问题"></a>解决iOS与pad里ifram无法滑动问题</h2><p>今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，<br>所以特意找了一下方法（经测可用）<br>  <a id="more"></a><br>在iframe的父容器添加如下css样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-overflow-scrolling:touch;</div><div class="line">overflow:auto;</div></pre></td></tr></table></figure></p>
 <p>对于安卓低于4.0版本的浏览器不支持overflow的问题，可使用如下js解决（对uc无效）:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> touchScroll(id) &#123;</div><div class="line">                var el = document.getElementByIdx_x(id);</div><div class="line">                var scrollStartPos = 0;</div><div class="line">                document.getElementByIdx_x(id).addEventListener(<span class="string">"touchstart"</span>, <span class="keyword">function</span> (event) &#123;</div><div class="line">                    scrollStartPos = this.scrollTop + event.touches[0].pageY;</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line">                document.getElementByIdx_x(id).addEventListener(<span class="string">"touchmove"</span>, <span class="keyword">function</span> (event) &#123;</div><div class="line">                    this.scrollTop = scrollStartPos - event.touches[0].pageY;</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
@@ -33,7 +33,11 @@
     </summary>
     
     
-      <category term="ifram ios pad" scheme="http://liyuanqing.top/tags/ifram-ios-pad/"/>
+      <category term="ifram" scheme="http://liyuanqing.top/tags/ifram/"/>
+    
+      <category term="ios" scheme="http://liyuanqing.top/tags/ios/"/>
+    
+      <category term="pad" scheme="http://liyuanqing.top/tags/pad/"/>
     
   </entry>
   
@@ -42,7 +46,7 @@
     <link href="http://liyuanqing.top/2017/02/13/js%E5%AE%9E%E7%8E%B0jq%E7%9A%84ajax/"/>
     <id>http://liyuanqing.top/2017/02/13/js实现jq的ajax/</id>
     <published>2017-02-13T10:22:43.000Z</published>
-    <updated>2017-02-13T10:29:42.092Z</updated>
+    <updated>2017-02-18T05:49:52.950Z</updated>
     
     <content type="html"><![CDATA[<p>本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解<br> <a id="more"></a></p>
 <h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">ajax</span></span>()&#123;</div><div class="line"> //获取ajax的相应值（请求类型，请求地址，同步或异步，传递数据，接收数据类型，成功失败函数等）</div><div class="line">  var ajaxData = &#123;</div><div class="line">    <span class="built_in">type</span>:arguments[0].type || <span class="string">"GET"</span>,</div><div class="line">    url:arguments[0].url || <span class="string">""</span>,</div><div class="line">    async:arguments[0].async || <span class="string">"true"</span>,</div><div class="line">    data:arguments[0].data || null,</div><div class="line">    dataType:arguments[0].dataType || <span class="string">"text"</span>,</div><div class="line">    contentType:arguments[0].contentType || <span class="string">"application/x-www-form-urlencoded"</span>,</div><div class="line">    beforeSend:arguments[0].beforeSend || <span class="function"><span class="title">function</span></span>()&#123;&#125;,</div><div class="line">    success:arguments[0].success || <span class="function"><span class="title">function</span></span>()&#123;&#125;,</div><div class="line">    error:arguments[0].error || <span class="function"><span class="title">function</span></span>()&#123;&#125;</div><div class="line">  &#125;</div><div class="line">  ajaxData.beforeSend()</div><div class="line">  var xhr = createxmlHttpRequest();    //创建 XMLHttpRequest 对象</div><div class="line">  xhr.responseType=ajaxData.dataType;  //预期服务器返回的数据类型</div><div class="line">  xhr.open(ajaxData.type,ajaxData.url,ajaxData.async);  //规定请求的类型、URL 以及是否异步处理请求</div><div class="line">  xhr.setRequestHeader(<span class="string">"Content-Type"</span>,ajaxData.contentType);  //发送信息至服务器时内容编码类型(向请求添加 HTTP 头)</div><div class="line">  xhr.send(convertData(ajaxData.data));                     //将请求发送到服务器</div><div class="line">  //当请求被发送到服务器时，我们需要执行一些基于响应的任务。</div><div class="line">  //每当 readyState 改变时，就会触发 onreadystatechange 事件。</div><div class="line">  //readyState 属性存有 XMLHttpRequest 的状态信息。</div><div class="line">  xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    <span class="keyword">if</span> (xhr.readyState == 4) &#123;</div><div class="line">      <span class="keyword">if</span>(xhr.status == 200)&#123;</div><div class="line">        ajaxData.success(xhr.response)</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        ajaxData.error()</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//创建 XMLHttpRequest 对象</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">createxmlHttpRequest</span></span>() &#123;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (window.ActiveXObject) &#123;</div><div class="line">    // IE6, IE5 浏览器执行代码</div><div class="line">    <span class="built_in">return</span> new ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (window.XMLHttpRequest) &#123;</div><div class="line">     //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</div><div class="line">    <span class="built_in">return</span> new XMLHttpRequest();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//解析传入的对象</div><div class="line"><span class="keyword">function</span> convertData(data)&#123;</div><div class="line">  <span class="keyword">if</span>( typeof data === <span class="string">'object'</span> )&#123;</div><div class="line">    var convertResult = <span class="string">""</span> ;</div><div class="line">    <span class="keyword">for</span>(var c <span class="keyword">in</span> data)&#123;</div><div class="line">      convertResult+= c + <span class="string">"="</span> + data[c] + <span class="string">"&amp;"</span>;</div><div class="line">    &#125;</div><div class="line">    convertResult=convertResult.substring(0,convertResult.length-1)</div><div class="line">    <span class="built_in">return</span> convertResult;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">return</span> data;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -71,7 +75,11 @@
     </summary>
     
     
-      <category term="js jq ajax" scheme="http://liyuanqing.top/tags/js-jq-ajax/"/>
+      <category term="js" scheme="http://liyuanqing.top/tags/js/"/>
+    
+      <category term="jq" scheme="http://liyuanqing.top/tags/jq/"/>
+    
+      <category term="ajax" scheme="http://liyuanqing.top/tags/ajax/"/>
     
   </entry>
   
@@ -80,7 +88,7 @@
     <link href="http://liyuanqing.top/2017/02/10/%E5%9F%BA%E4%BA%8Egithub%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://liyuanqing.top/2017/02/10/基于github与hexo搭建自己的博客/</id>
     <published>2017-02-10T09:58:05.000Z</published>
-    <updated>2017-02-18T01:56:55.898Z</updated>
+    <updated>2017-02-18T05:49:17.766Z</updated>
     
     <content type="html"><![CDATA[<h2 id="基于github与hexo搭建自己的博客"><a href="#基于github与hexo搭建自己的博客" class="headerlink" title="基于github与hexo搭建自己的博客"></a>基于github与hexo搭建自己的博客</h2><p>本文将介绍如何基于github与hexo模板搭建一个属于自己的博客，博客的样式可以参看 <a href="liyuanqing.top">李元庆的博客</a> 博客的具体代码可以查看<a href="https://github.com/liyuanqing/liyuanqing.github.io" target="_blank" rel="external">我的github仓库（持续更新中）</a>，同时欢迎各位留言提问与给出建议<br> <a id="more"></a></p>
 <h3 id="为何选择github与hexo"><a href="#为何选择github与hexo" class="headerlink" title="为何选择github与hexo"></a>为何选择github与hexo</h3><p> github为我们提供了免费的域名与仓库，相比较博客园与新浪微博等博客，虽然他们开通相对容易，但是限制较多，github Pages可以定制自己的博客内容功能能，一切有自己操控。<br>  Github Pages优点：</p>
@@ -111,7 +119,11 @@
     </summary>
     
     
-      <category term="github 博客hexo" scheme="http://liyuanqing.top/tags/github-%E5%8D%9A%E5%AE%A2hexo/"/>
+      <category term="github" scheme="http://liyuanqing.top/tags/github/"/>
+    
+      <category term="博客" scheme="http://liyuanqing.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="http://liyuanqing.top/tags/hexo/"/>
     
   </entry>
   

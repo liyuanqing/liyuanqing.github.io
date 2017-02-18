@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://liyuanqing.top/2017/02/17/解决iOS与pad里ifram无法滑动问题/index.html">
 <meta property="og:site_name" content="李元庆的博客">
 <meta property="og:description" content="解决iOS与pad里ifram无法滑动问题今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
-<meta property="og:updated_time" content="2017-02-18T01:56:58.723Z">
+<meta property="og:updated_time" content="2017-02-18T05:50:17.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决iOS与pad里ifram无法滑动问题">
 <meta name="twitter:description" content="解决iOS与pad里ifram无法滑动问题今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
@@ -60,7 +60,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/about">关于我</a></li>
 	        
 			</ul>
 		</nav>
@@ -72,10 +72,6 @@
             
     			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -142,7 +138,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/about">关于我</a></li>
 		        
 				</ul>
 			</nav>
@@ -218,7 +214,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ifram ios pad</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ifram</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ios</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pad</a>
         		</li>
       		
 		</ul>
@@ -374,25 +378,17 @@ var duoshuoQuery = {short_name:"datoublog"};
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
       
         
     </ul>
@@ -422,6 +418,42 @@ var duoshuoQuery = {short_name:"datoublog"};
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ifram ios pad</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ifram</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pad</a>
               </li>
             
             <div class="clearfix"></div>
@@ -481,12 +513,6 @@ var duoshuoQuery = {short_name:"datoublog"};
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
     
   </div>
   
