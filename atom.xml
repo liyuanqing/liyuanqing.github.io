@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>李元庆的博客</title>
-  <subtitle>打</subtitle>
+  <subtitle>前端的时代已开启</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyuanqing.top/"/>
