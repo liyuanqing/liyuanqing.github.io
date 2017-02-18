@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[解决iOS与pad里ifram无法滑动问题]]></title>
+      <url>http://liyuanqing.top/2017/02/17/%E8%A7%A3%E5%86%B3iOS%E4%B8%8Epad%E9%87%8Cifram%E6%97%A0%E6%B3%95%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h2 id="解决iOS与pad里ifram无法滑动问题"><a href="#解决iOS与pad里ifram无法滑动问题" class="headerlink" title="解决iOS与pad里ifram无法滑动问题"></a>解决iOS与pad里ifram无法滑动问题</h2><p>今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，<br>所以特意找了一下方法（经测可用）<br>  <a id="more"></a><br>在iframe的父容器添加如下css样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-overflow-scrolling:touch;</div><div class="line">overflow:auto;</div></pre></td></tr></table></figure></p>
+<p>对于安卓低于4.0版本的浏览器不支持overflow的问题，可使用如下js解决（对uc无效）:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> touchScroll(id) &#123;</div><div class="line">                var el = document.getElementByIdx_x(id);</div><div class="line">                var scrollStartPos = 0;</div><div class="line">                document.getElementByIdx_x(id).addEventListener(<span class="string">"touchstart"</span>, <span class="keyword">function</span> (event) &#123;</div><div class="line">                    scrollStartPos = this.scrollTop + event.touches[0].pageY;</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line">                document.getElementByIdx_x(id).addEventListener(<span class="string">"touchmove"</span>, <span class="keyword">function</span> (event) &#123;</div><div class="line">                    this.scrollTop = scrollStartPos - event.touches[0].pageY;</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[js实现jq的ajax]]></title>
       <url>http://liyuanqing.top/2017/02/13/js%E5%AE%9E%E7%8E%B0jq%E7%9A%84ajax/</url>
       <content type="html"><![CDATA[<p>本文将介绍如何使用js封装一段代码，实现jq的ajax功能，每一步代码均有注释便于理解<br> <a id="more"></a></p>
@@ -28,9 +36,28 @@
     </entry>
     
     <entry>
-      <title><![CDATA[测试博客]]></title>
-      <url>http://liyuanqing.top/2017/02/09/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<h2 id="测试标题一"><a href="#测试标题一" class="headerlink" title="测试标题一"></a>测试标题一</h2><p> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> <a id="more"></a><br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br> 这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>  这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>   这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>    这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>     这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>      这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>       这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>        这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>         这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试<br>          这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试这是测试测试</p>
+      <title><![CDATA[基于github与hexo搭建自己的博客]]></title>
+      <url>http://liyuanqing.top/2017/02/10/%E5%9F%BA%E4%BA%8Egithub%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<h2 id="基于github与hexo搭建自己的博客"><a href="#基于github与hexo搭建自己的博客" class="headerlink" title="基于github与hexo搭建自己的博客"></a>基于github与hexo搭建自己的博客</h2><p>本文将介绍如何基于github与hexo模板搭建一个属于自己的博客，博客的样式可以参看 <a href="liyuanqing.top">李元庆的博客</a> 博客的具体代码可以查看<a href="https://github.com/liyuanqing/liyuanqing.github.io" target="_blank" rel="external">我的github仓库（持续更新中）</a>，同时欢迎各位留言提问与给出建议<br> <a id="more"></a></p>
+<h3 id="为何选择github与hexo"><a href="#为何选择github与hexo" class="headerlink" title="为何选择github与hexo"></a>为何选择github与hexo</h3><p> github为我们提供了免费的域名与仓库，相比较博客园与新浪微博等博客，虽然他们开通相对容易，但是限制较多，github Pages可以定制自己的博客内容功能能，一切有自己操控。<br>  Github Pages优点：</p>
+<ul>
+<li>轻量级的博客系统，没有麻烦的配置</li>
+<li>使用标记语言，比如Markdown</li>
+<li>无需自己搭建服务器</li>
+<li>根据Github的限制，对应的每个站有300MB空间</li>
+<li>可以绑定自己的域名<br>Github Pages缺点：</li>
+<li>不能关联数据库，所有的东西都是静态的</li>
+<li>具有大小限制（似乎是2G）,不过用于搭建自己的博客或者是小站完全是够的<br>一开始我选择的是官方推荐的Jekyll，但是Jekyll需要的环境太多，较复杂，所以后来我选择的比较简单的hexo<br>接下来我将介绍如何搭建博客并绑定自己的域名</li>
+</ul>
+<h3 id="注册github账号和自己的仓库"><a href="#注册github账号和自己的仓库" class="headerlink" title="注册github账号和自己的仓库"></a>注册github账号和自己的仓库</h3><ol>
+<li>前往<a href="www.github.com">github</a>注册登录账号，与一般的网站注册账号的流程差不多，但是github是国外网站，在国内访问速度会有点慢<br>注册好了之后登录<br>&lt;<img src="http://i1.piimg.com/1949/4b852eda6f0fd388.png" alt=""></li>
+</ol>
+<ol>
+<li><p>建立自己的仓库<br>&lt;<img src="http://i1.piimg.com/1949/a0db1bcef31c849a.png" alt=""></p>
+<p>然后点击new按钮你会看到<br>&lt;<img src="http://i1.piimg.com/1949/7d46a29f51bca89d.png" alt=""><br>注意你的公共哭的名称要填写格式为XXX.github.io其中XXX是你的用户名</p>
+</li>
+<li>未完待续。。。</li>
+</ol>
 ]]></content>
     </entry>
     
