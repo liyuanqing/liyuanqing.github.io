@@ -4,6 +4,34 @@
   
     
     <entry>
+      <title><![CDATA[react初探（1）]]></title>
+      <url>http://liyuanqing.top/2017/02/18/react%E5%88%9D%E6%8E%A2%EF%BC%881%EF%BC%89/</url>
+      <content type="html"><![CDATA[<p>从去年开始，团队开始使用react全家桶开发一系列的PC端后台系统，遇到了许多坑，有的已经爬出来了，有的正在填<br>接下来我讲写一些关于react的文章与大家分享。欢迎大家留言交流。<br> <a id="more"></a></p>
+<h3 id="react简介"><a href="#react简介" class="headerlink" title="react简介"></a>react简介</h3><p>React是Facebook开发的一款JS库，区别于MVC框架，他更注重view层，更容易编写可重复使用的组件（这也是我们选择他的一个重要原因）</p>
+<h3 id="react全家桶"><a href="#react全家桶" class="headerlink" title="react全家桶"></a>react全家桶</h3><p>React在实际项目开发中有一整套的流程和工具，而要实现整个的流程的就是react全家桶。下面我将介绍我使用的react全家桶。<br>react全家桶：<br>基本内容：</p>
+<ul>
+<li>React</li>
+<li>JSX(Javascript和XML结合的一种格式)</li>
+<li>npm</li>
+<li>JavaScript 打包工具（webpack）</li>
+<li>ES6(babel转译)</li>
+<li>路由（react-router）</li>
+<li>Flux（Flux库——Redux）<br>其他的一些插件推荐</li>
+<li>md5</li>
+<li>antUI(一个非常好用的UI组件库) : <a href="https://ant.design/docs/react/introduce-cn" target="_blank" rel="external">https://ant.design/docs/react/introduce-cn</a></li>
+</ul>
+<p>这套技术栈最主要的一个核心思想就是单项数据流，真正实现了以数据为核心。<br>说道单向数据流就要祭出这张图<br>&lt;<img src="http://upload-images.jianshu.io/upload_images/35008-614667368b68ec5b.png?imageView2/2/w/1240/q/100" alt=""><br>Dispatcher是一个全局的分发器负责接收Action，而Store可以在Dispatcher上监听到Action并做出相应的操作。简单的理解可以认为类似于全局的消息发布订阅模型。Action可以来自于用户的某个界面操作，比如点击提交按钮；也可以来自服务器端的某个数据更新。当数据模型发生变化时，就触发刷新整个界面<br>单向数据流的优点：</p>
+<ul>
+<li>集中管理状态，所有的页面状态集中管理，通过不同的状态管理页面UI</li>
+<li>让数据模型模型变得简单，所有数据都看作是只读的，要改变数据必须触发action动作触发一整个流程，改变相应的store，从而改变改变数据，更新UI。</li>
+<li>维护简单，维护时只需要增增相应的状态，或者维护原有的的状态即可。传统开发方式的维护，牵一发而动全身，改了一处不知道会不会触发其他逻辑代码，一旦发生牵连，则要花费很大的精力解决带来的连锁bug</li>
+<li>开发可复用组件变得简单。组件就是状态机器当组件处于某个状态时，那么就输出这个状态对应的界面。状态改变时React负责以最高效的方式去比较两个界面并更新DOM树，从而更新组件UI</li>
+</ul>
+<h3 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h3><p> 使用React技术栈，使我能更加专注于业务的开发，开发思路也更加清晰。<br> 目前遇到的问题就是接口安全问题，传统开发方式，有后台PHP后Java嵌套界面，由服务器直接输出已经生成好的页面，接口安全也在后台直接做好，然而这套技术栈只需要后台提供接口其他的全部由前端操控，带来方便 的同时，也需要前端做相应的接口安全方面，目前的解决方案就是，后台通过接口传给前台一个token,前台请求接口时带入token值进行请求，但是这样token传给了前台页面很容易被劫持。所以下一步的解决方案是前端自己构建一个nodejs后台，从而在Nodejs上进行安全验证，Nodejs搭建出来后前端能做的东西也将更多，甚至可以抛弃PHP和Java，自己独立开发一个系统，这也将是我的全栈发展路线</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[解决iOS与pad里ifram无法滑动问题]]></title>
       <url>http://liyuanqing.top/2017/02/17/%E8%A7%A3%E5%86%B3iOS%E4%B8%8Epad%E9%87%8Cifram%E6%97%A0%E6%B3%95%E6%BB%91%E5%8A%A8%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<h2 id="解决iOS与pad里ifram无法滑动问题"><a href="#解决iOS与pad里ifram无法滑动问题" class="headerlink" title="解决iOS与pad里ifram无法滑动问题"></a>解决iOS与pad里ifram无法滑动问题</h2><p>今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，<br>所以特意找了一下方法（经测可用）<br>  <a id="more"></a><br>在iframe的父容器添加如下css样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-overflow-scrolling:touch;</div><div class="line">overflow:auto;</div></pre></td></tr></table></figure></p>

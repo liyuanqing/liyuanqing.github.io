@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liyuanqing.top">
-  <title>Tag: ios | 李元庆的博客</title>
+  <title>react初探（1） | 李元庆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="黑龙江大学12级，就职于杭州筑家易网络科技有限公司。任职前端工程师。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="李元庆的博客">
-<meta property="og:url" content="http://liyuanqing.top/tags/ios/index.html">
+  <meta name="description" content="从去年开始，团队开始使用react全家桶开发一系列的PC端后台系统，遇到了许多坑，有的已经爬出来了，有的正在填接下来我讲写一些关于react的文章与大家分享。欢迎大家留言交流。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react初探（1）">
+<meta property="og:url" content="http://liyuanqing.top/2017/02/18/react初探（1）/index.html">
 <meta property="og:site_name" content="李元庆的博客">
-<meta property="og:description" content="黑龙江大学12级，就职于杭州筑家易网络科技有限公司。任职前端工程师。">
+<meta property="og:description" content="从去年开始，团队开始使用react全家桶开发一系列的PC端后台系统，遇到了许多坑，有的已经爬出来了，有的正在填接下来我讲写一些关于react的文章与大家分享。欢迎大家留言交流。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/35008-614667368b68ec5b.png?imageView2/2/w/1240/q/100">
+<meta property="og:updated_time" content="2017-02-18T09:33:46.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李元庆的博客">
-<meta name="twitter:description" content="黑龙江大学12级，就职于杭州筑家易网络科技有限公司。任职前端工程师。">
+<meta name="twitter:title" content="react初探（1）">
+<meta name="twitter:description" content="从去年开始，团队开始使用react全家桶开发一系列的PC端后台系统，遇到了许多坑，有的已经爬出来了，有的正在填接下来我讲写一些关于react的文章与大家分享。欢迎大家留言交流。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/35008-614667368b68ec5b.png?imageView2/2/w/1240/q/100">
   
     <link rel="alternative" href="/atom.xml" title="李元庆的博客" type="application/atom+xml">
   
@@ -152,69 +155,195 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-react初探（1）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/17/解决iOS与pad里ifram无法滑动问题/" class="archive-article-date">
-  	<time datetime="2017-02-17T09:28:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/17/解决iOS与pad里ifram无法滑动问题/">解决iOS与pad里ifram无法滑动问题</a>
+    <h1 class="article-title" itemprop="name">
+      react初探（1）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/02/18/react初探（1）/" class="archive-article-date">
+  	<time datetime="2017-02-18T08:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>从去年开始，团队开始使用react全家桶开发一系列的PC端后台系统，遇到了许多坑，有的已经爬出来了，有的正在填<br>接下来我讲写一些关于react的文章与大家分享。欢迎大家留言交流。<br> <a id="more"></a></p>
+<h3 id="react简介"><a href="#react简介" class="headerlink" title="react简介"></a>react简介</h3><p>React是Facebook开发的一款JS库，区别于MVC框架，他更注重view层，更容易编写可重复使用的组件（这也是我们选择他的一个重要原因）</p>
+<h3 id="react全家桶"><a href="#react全家桶" class="headerlink" title="react全家桶"></a>react全家桶</h3><p>React在实际项目开发中有一整套的流程和工具，而要实现整个的流程的就是react全家桶。下面我将介绍我使用的react全家桶。<br>react全家桶：<br>基本内容：</p>
+<ul>
+<li>React</li>
+<li>JSX(Javascript和XML结合的一种格式)</li>
+<li>npm</li>
+<li>JavaScript 打包工具（webpack）</li>
+<li>ES6(babel转译)</li>
+<li>路由（react-router）</li>
+<li>Flux（Flux库——Redux）<br>其他的一些插件推荐</li>
+<li>md5</li>
+<li>antUI(一个非常好用的UI组件库) : <a href="https://ant.design/docs/react/introduce-cn" target="_blank" rel="external">https://ant.design/docs/react/introduce-cn</a></li>
+</ul>
+<p>这套技术栈最主要的一个核心思想就是单项数据流，真正实现了以数据为核心。<br>说道单向数据流就要祭出这张图<br>&lt;<img src="http://upload-images.jianshu.io/upload_images/35008-614667368b68ec5b.png?imageView2/2/w/1240/q/100" alt=""><br>Dispatcher是一个全局的分发器负责接收Action，而Store可以在Dispatcher上监听到Action并做出相应的操作。简单的理解可以认为类似于全局的消息发布订阅模型。Action可以来自于用户的某个界面操作，比如点击提交按钮；也可以来自服务器端的某个数据更新。当数据模型发生变化时，就触发刷新整个界面<br>单向数据流的优点：</p>
+<ul>
+<li>集中管理状态，所有的页面状态集中管理，通过不同的状态管理页面UI</li>
+<li>让数据模型模型变得简单，所有数据都看作是只读的，要改变数据必须触发action动作触发一整个流程，改变相应的store，从而改变改变数据，更新UI。</li>
+<li>维护简单，维护时只需要增增相应的状态，或者维护原有的的状态即可。传统开发方式的维护，牵一发而动全身，改了一处不知道会不会触发其他逻辑代码，一旦发生牵连，则要花费很大的精力解决带来的连锁bug</li>
+<li>开发可复用组件变得简单。组件就是状态机器当组件处于某个状态时，那么就输出这个状态对应的界面。状态改变时React负责以最高效的方式去比较两个界面并更新DOM树，从而更新组件UI</li>
+</ul>
+<h3 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h3><p> 使用React技术栈，使我能更加专注于业务的开发，开发思路也更加清晰。<br> 目前遇到的问题就是接口安全问题，传统开发方式，有后台PHP后Java嵌套界面，由服务器直接输出已经生成好的页面，接口安全也在后台直接做好，然而这套技术栈只需要后台提供接口其他的全部由前端操控，带来方便 的同时，也需要前端做相应的接口安全方面，目前的解决方案就是，后台通过接口传给前台一个token,前台请求接口时带入token值进行请求，但是这样token传给了前台页面很容易被劫持。所以下一步的解决方案是前端自己构建一个nodejs后台，从而在Nodejs上进行安全验证，Nodejs搭建出来后前端能做的东西也将更多，甚至可以抛弃PHP和Java，自己独立开发一个系统，这也将是我的全栈发展路线</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://p1.bqimg.com/1949/bffe04eea6c00e93.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ifram</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ios</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pad</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liyuanqing.top/2017/02/18/react初探（1）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/02/17/解决iOS与pad里ifram无法滑动问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解决iOS与pad里ifram无法滑动问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
 
+
+ <section id="comments">
+  <!-- 多说评论框 start -->
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/02/18/react初探（1）/" data-title="react初探（1）" data-url="http://liyuanqing.top/2017/02/18/react初探（1）/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"datoublog"};
+ (function() {
+   var ds = document.createElement('script');
+   ds.type = 'text/javascript';ds.async = true;
+   ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+   ds.charset = 'UTF-8';
+   (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+ </script>
+<!-- 多说公共JS代码 end -->
+ </section>
+ 
 
           </div>
         </div>
@@ -236,9 +365,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
