@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://liyuanqing.top">
   <title>解决iOS与pad里ifram无法滑动问题 | 李元庆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解决iOS与pad里ifram无法滑动问题今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
+  <meta name="description" content="今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决iOS与pad里ifram无法滑动问题">
 <meta property="og:url" content="http://liyuanqing.top/2017/02/17/解决iOS与pad里ifram无法滑动问题/index.html">
 <meta property="og:site_name" content="李元庆的博客">
-<meta property="og:description" content="解决iOS与pad里ifram无法滑动问题今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
-<meta property="og:updated_time" content="2017-02-18T05:50:17.398Z">
+<meta property="og:description" content="今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
+<meta property="og:updated_time" content="2017-02-18T09:35:59.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决iOS与pad里ifram无法滑动问题">
-<meta name="twitter:description" content="解决iOS与pad里ifram无法滑动问题今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
+<meta name="twitter:description" content="今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，所以特意找了一下方法（经测可用）">
   
     <link rel="alternative" href="/atom.xml" title="李元庆的博客" type="application/atom+xml">
   
@@ -173,7 +173,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="解决iOS与pad里ifram无法滑动问题"><a href="#解决iOS与pad里ifram无法滑动问题" class="headerlink" title="解决iOS与pad里ifram无法滑动问题"></a>解决iOS与pad里ifram无法滑动问题</h2><p>今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，<br>所以特意找了一下方法（经测可用）<br>  <a id="more"></a><br>在iframe的父容器添加如下css样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-overflow-scrolling:touch;</div><div class="line">overflow:auto;</div></pre></td></tr></table></figure></p>
+        <p>今天遇到一个问题，在手机内嵌ifram，在iOS和pad里只会显示第一屏的内容，下面的内容加载出来了但是全部在下面，无法滑动展示，<br>所以特意找了一下方法（经测可用）<br>  <a id="more"></a><br>在iframe的父容器添加如下css样式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-overflow-scrolling:touch;</div><div class="line">overflow:auto;</div></pre></td></tr></table></figure></p>
 <p>对于安卓低于4.0版本的浏览器不支持overflow的问题，可使用如下js解决（对uc无效）:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> touchScroll(id) &#123;</div><div class="line">                var el = document.getElementByIdx_x(id);</div><div class="line">                var scrollStartPos = 0;</div><div class="line">                document.getElementByIdx_x(id).addEventListener(<span class="string">"touchstart"</span>, <span class="keyword">function</span> (event) &#123;</div><div class="line">                    scrollStartPos = this.scrollTop + event.touches[0].pageY;</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line">                document.getElementByIdx_x(id).addEventListener(<span class="string">"touchmove"</span>, <span class="keyword">function</span> (event) &#123;</div><div class="line">                    this.scrollTop = scrollStartPos - event.touches[0].pageY;</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
 
       
@@ -418,6 +418,22 @@ var duoshuoQuery = {short_name:"datoublog"};
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
@@ -439,22 +455,6 @@ var duoshuoQuery = {short_name:"datoublog"};
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">pad</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
             <div class="clearfix"></div>
